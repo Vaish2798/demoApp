@@ -90,6 +90,19 @@
                                 <rect key="frame" x="0.0" y="100" width="393" height="718"/>
                                 <color key="backgroundColor" red="0.93729639050000002" green="0.94509381059999997" blue="0.9450981021" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAC-Li-5bx">
+                                <rect key="frame" x="91.666666666666686" y="735" width="210" height="63"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="3A7-S6-XI6"/>
+                                    <constraint firstAttribute="width" constant="210" id="Y0T-EO-3t1"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="category_icon"/>
+                                <connections>
+                                    <action selector="categoriesClicked:" destination="ybA-Do-3mc" eventType="touchUpInside" id="t30-jR-Wwd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="naF-IM-BXp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -97,14 +110,17 @@
                             <constraint firstItem="O8Z-a0-E0O" firstAttribute="top" secondItem="IKP-xQ-CWa" secondAttribute="top" id="1ss-Pa-adZ"/>
                             <constraint firstItem="O8Z-a0-E0O" firstAttribute="leading" secondItem="naF-IM-BXp" secondAttribute="leading" id="4co-Vt-ftY"/>
                             <constraint firstItem="C3H-y8-5WL" firstAttribute="leading" secondItem="naF-IM-BXp" secondAttribute="leading" id="7GS-39-VnW"/>
+                            <constraint firstItem="DAC-Li-5bx" firstAttribute="centerX" secondItem="IKP-xQ-CWa" secondAttribute="centerX" id="I69-1Y-YyR"/>
                             <constraint firstItem="O8Z-a0-E0O" firstAttribute="trailing" secondItem="naF-IM-BXp" secondAttribute="trailing" id="Jzv-hX-RMt"/>
                             <constraint firstItem="naF-IM-BXp" firstAttribute="trailing" secondItem="C3H-y8-5WL" secondAttribute="trailing" id="ZTT-Cq-V73"/>
                             <constraint firstItem="C3H-y8-5WL" firstAttribute="top" secondItem="O8Z-a0-E0O" secondAttribute="bottom" id="bw7-33-GoJ"/>
                             <constraint firstItem="naF-IM-BXp" firstAttribute="bottom" secondItem="C3H-y8-5WL" secondAttribute="bottom" id="dFi-dp-RQB"/>
+                            <constraint firstItem="naF-IM-BXp" firstAttribute="bottom" secondItem="DAC-Li-5bx" secondAttribute="bottom" constant="20" id="np9-2R-ZKz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="S1U-sW-u9I"/>
                     <connections>
+                        <outlet property="categoriesButton" destination="DAC-Li-5bx" id="7aj-op-nTr"/>
                         <outlet property="tableView" destination="C3H-y8-5WL" id="dnr-je-vFA"/>
                     </connections>
                 </viewController>
@@ -337,6 +353,7 @@
     <resources>
         <image name="back_black" width="6.6666665077209473" height="12"/>
         <image name="cartIcon" width="58" height="48"/>
+        <image name="category_icon" width="228" height="88"/>
         <image name="heartIcon" width="46" height="44"/>
         <image name="mainImage" width="32" height="34"/>
         <systemColor name="systemBackgroundColor">

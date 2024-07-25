@@ -45,6 +45,8 @@ class CartViewController: UIViewController {
     @IBAction func backButtonClick(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    
     func addObserver() {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "ProductChanged"), object: nil, queue: nil, using: catchNotificationToShowPrice)
     }

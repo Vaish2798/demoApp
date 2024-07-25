@@ -10,6 +10,10 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var categoriesButton: UIButton!
+    
+    @IBOutlet weak var cancelButton: UIButton!
     var jsonData: [String: Any]?
     var isClicked = false
     var isFav = false
@@ -20,6 +24,7 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
+        self.categoriesButton.layer.cornerRadius = 10
         self.registerCells()
     }
     func registerCells() {
@@ -51,6 +56,11 @@ class HomeViewController: UIViewController {
           }
         }
     }
+    
+    @IBAction func categoriesClicked(_ sender: UIButton) {
+        self.categoriesButton.isHidden = true
+        self.addCategoriesPopUp()
+    }
 }
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,7 +84,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
-extension HomeViewController: HomeCategoryListTableViewCellDelegate {
+extension HomeViewController: HomeCategoryListTableViewCellDelegate, CategoriesListViewDelegate {
+    func cancelTap() {
+        removeSubView(1000)
+        self.categoriesButton.isHidden = false
+    }
     func addButtonTapped(index: Int) {
         for data in self.loadJson().categories ?? [] {
             if data.items?[index].id == self.loadJson().categories?[index].items?[index].id {
@@ -100,7 +114,23 @@ extension HomeViewController: HomeCategoryListTableViewCellDelegate {
         self.isClicked = !(self.isClicked)
         self.tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
     }
-    
+    func addCategoriesPopUp() {
+        DispatchQueue.main.async {
+            let categoriesPopUp = CategoriesListView.init(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+            categoriesPopUp.tag = 1000
+            categoriesPopUp.delegate = self
+            categoriesPopUp.outerView.layer.cornerRadius = 20
+            categoriesPopUp.categoryArray = self.loadJson().categories ?? [Categories]()
+            self.view.addSubview(categoriesPopUp)
+        }
+    }
+    func removeSubView(_ tag: Int) {
+        DispatchQueue.main.async {
+            for subview in (self.view.subviews) where (subview.tag == tag) {
+                subview.removeFromSuperview()
+            }
+        }
+    }
     func loadJson() -> DemoModel {
         let items = Bundle.main.decode(type: DemoModel.self, from: "DemoJson.json")
         return items

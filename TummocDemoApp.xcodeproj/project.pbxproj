@@ -11,6 +11,10 @@
 		2F0BD7130761BD7034065DE0 /* Pods_TummocDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DA25BB0BFDB76831AC95D3 /* Pods_TummocDemoApp.framework */; };
 		54DD0EE80A6958F352D6443E /* Pods_TummocDemoApp_TummocDemoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC5351233809C95F2B8BB3D /* Pods_TummocDemoApp_TummocDemoAppUITests.framework */; };
 		BF3F2C2E2C521BFE00EE82FE /* CommonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3F2C2D2C521BFE00EE82FE /* CommonClass.swift */; };
+		BF3F2C312C5266B000EE82FE /* CategoriesListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF3F2C302C5266B000EE82FE /* CategoriesListView.xib */; };
+		BF3F2C332C526A4C00EE82FE /* CategoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3F2C322C526A4C00EE82FE /* CategoriesListView.swift */; };
+		BF3F2C362C52717B00EE82FE /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3F2C342C52717B00EE82FE /* CategoriesTableViewCell.swift */; };
+		BF3F2C372C52717B00EE82FE /* CategoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF3F2C352C52717B00EE82FE /* CategoriesTableViewCell.xib */; };
 		BFD3AC3D2C514C000057FB6E /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD3AC3C2C514C000057FB6E /* FavouriteViewController.swift */; };
 		BFD3AC3F2C514C240057FB6E /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD3AC3E2C514C240057FB6E /* CartViewController.swift */; };
 		BFD3AC422C514D4B0057FB6E /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD3AC402C514D4B0057FB6E /* ProductTableViewCell.swift */; };
@@ -62,6 +66,10 @@
 		8719E1FFF60C1BC4CFF82422 /* Pods_TummocDemoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TummocDemoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD5CBBF788C12E4291905F7 /* Pods-TummocDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TummocDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-TummocDemoApp/Pods-TummocDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BF3F2C2D2C521BFE00EE82FE /* CommonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonClass.swift; sourceTree = "<group>"; };
+		BF3F2C302C5266B000EE82FE /* CategoriesListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesListView.xib; sourceTree = "<group>"; };
+		BF3F2C322C526A4C00EE82FE /* CategoriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListView.swift; sourceTree = "<group>"; };
+		BF3F2C342C52717B00EE82FE /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
+		BF3F2C352C52717B00EE82FE /* CategoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesTableViewCell.xib; sourceTree = "<group>"; };
 		BFD3AC3C2C514C000057FB6E /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		BFD3AC3E2C514C240057FB6E /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		BFD3AC402C514D4B0057FB6E /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
@@ -142,6 +150,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BF3F2C2F2C52667F00EE82FE /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				BF3F2C302C5266B000EE82FE /* CategoriesListView.xib */,
+				BF3F2C322C526A4C00EE82FE /* CategoriesListView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		BFD3AC4E2C515F670057FB6E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +236,7 @@
 		BFF62B932C51085C00776034 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BF3F2C2F2C52667F00EE82FE /* CustomViews */,
 				BFF62BA22C51150600776034 /* CollectionViewCells */,
 				BFF62B9D2C51126500776034 /* TableViewCells */,
 			);
@@ -244,6 +262,8 @@
 				BFD3AC412C514D4B0057FB6E /* ProductTableViewCell.xib */,
 				BFD3AC4F2C5165530057FB6E /* CartProductTableViewCell.swift */,
 				BFD3AC502C5165530057FB6E /* CartProductTableViewCell.xib */,
+				BF3F2C342C52717B00EE82FE /* CategoriesTableViewCell.swift */,
+				BF3F2C352C52717B00EE82FE /* CategoriesTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -367,11 +387,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF62B6F2C5107CF00776034 /* LaunchScreen.storyboard in Resources */,
+				BF3F2C312C5266B000EE82FE /* CategoriesListView.xib in Resources */,
 				BFF62BA62C51155D00776034 /* HomeProductCollectionViewCell.xib in Resources */,
 				BFF62BA12C51128100776034 /* HomeCategoryListTableViewCell.xib in Resources */,
 				BFD3AC522C5165540057FB6E /* CartProductTableViewCell.xib in Resources */,
 				BFD3AC432C514D4B0057FB6E /* ProductTableViewCell.xib in Resources */,
 				BFF62B6C2C5107CF00776034 /* Assets.xcassets in Resources */,
+				BF3F2C372C52717B00EE82FE /* CategoriesTableViewCell.xib in Resources */,
 				BFF62B6A2C5107CC00776034 /* Main.storyboard in Resources */,
 				BFF62B9A2C510A9500776034 /* DemoJson.json in Resources */,
 			);
@@ -505,6 +527,8 @@
 				BFF62BA52C51155D00776034 /* HomeProductCollectionViewCell.swift in Sources */,
 				BFF62BA82C51224A00776034 /* DemoModel.swift in Sources */,
 				BFD3AC512C5165540057FB6E /* CartProductTableViewCell.swift in Sources */,
+				BF3F2C332C526A4C00EE82FE /* CategoriesListView.swift in Sources */,
+				BF3F2C362C52717B00EE82FE /* CategoriesTableViewCell.swift in Sources */,
 				BFF62B632C5107CC00776034 /* AppDelegate.swift in Sources */,
 				BF3F2C2E2C521BFE00EE82FE /* CommonClass.swift in Sources */,
 				BFD3AC3D2C514C000057FB6E /* FavouriteViewController.swift in Sources */,
