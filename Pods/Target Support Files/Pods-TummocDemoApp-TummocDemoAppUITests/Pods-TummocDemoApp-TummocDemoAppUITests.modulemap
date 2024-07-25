@@ -1,0 +1,6 @@
+framework module Pods_TummocDemoApp_TummocDemoAppUITests {
+  umbrella header "Pods-TummocDemoApp-TummocDemoAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
